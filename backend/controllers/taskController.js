@@ -21,7 +21,7 @@ export const createTask = (req, res) => {
 		[title, req.user.id],
 		(err, results) => {
 			if (err) return res.status(500).send(err)
-			res.status(201).json({id: results.insertId, title, completed: false})
+			res.status(201).json({id: results.insertId, title, completed: true})
 		}
 	)
 }
